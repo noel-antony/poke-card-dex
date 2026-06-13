@@ -12,11 +12,13 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 #pokedex-container {
     background-color: #d20000;
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
     padding: 18px;
     border-radius: 20px;
     border: 5px solid rgb(160, 11, 11);
@@ -77,6 +79,7 @@ body {
 
 #pokemonInput {
     flex: 1;
+    min-width: 0;
     background-color: #1e1e24;
     color: #ffffff;
     border: 2px solid #b91c1c;
@@ -283,4 +286,28 @@ body {
 
 .weakness-box span {
     font-weight: 900;
+}
+
+@media (max-width: 480px) {
+    #pokedex-container {
+        width: 100%;
+        max-width: 480px;
+        padding: 5px;
+    }
+
+    .nav-btn {
+        width: 20px;
+        height: 46px;
+        font-size: 0.85rem;
+    }
+
+    #screen-display {
+        padding: 5px;
+    }
+
+    .top-bar {
+        padding: 5px;
+        margin: 6px;
+        margin-top: 10px;
+    }
 }
